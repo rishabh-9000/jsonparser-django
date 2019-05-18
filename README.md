@@ -16,7 +16,7 @@ Now create virtual environment
 ```bash
 virtualenv envname
 
-To create virtual environment with Python 3 as default
+*To create virtual environment with Python 3 as default
 virtualenv -p python3 envname
 ```
 Activate the virtual environment
@@ -29,6 +29,7 @@ source envname/bin/activate
 Cloning the project from github
 ```bash
 git clone https://github.com/rishabh-9000/jsonparser-django.git
+cd jsonparser-django
 ```
 Install Django and requirements
 ```bash
@@ -36,7 +37,5 @@ pip install -r requirements.txt
 ```
 To run the server
 ```bash
-cd jsonparser-django
-
 python manage.py runserver
 ```
