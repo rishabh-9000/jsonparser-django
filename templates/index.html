@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center">PRODUCTS</h1>
+
+    <table class="table" style="width:100%" border="1px">
+    {% for key, value in dictionary.items %}
+        <table class="table" style="width:100%" border="1px">
+            <tr class="table-active"><th colspan="4" style="text-align: center">{{ key }}</th></tr>
+            <tr class="table-success">
+            {% for key1, value1 in value.items %}
+                <th style="width: 25%; text-align: center">{{ key1 | upper }}</th>
+            {% endfor %}
+            </tr>
+            <tr class="table-success">
+            {% for key1, value1 in value.items %}
+                <td style="text-align: center">{{ value1 }}</td>
+            {% endfor %}
+            </tr>
+        </table>
+        <br>
+    {% endfor %}
+    </table>
+</body>
+</html>
